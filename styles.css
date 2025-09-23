@@ -1,0 +1,193 @@
+/* General Body Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF; /* Pure White Background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+  min-height: 100vh;
+  overflow: hidden; /* Hide overflow from neon effect */
+  position: relative; /* For the pseudo-element */
+}
+
+/* ✅ UPDATED: Light Neon background effect */
+body::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    #7AFDEC, /* Light Aqua */
+    #F5B8FF, /* Pastel Lavender */
+    #B1FFD6, /* Soft Mint */
+    #FFCBA0, /* Light Peach */
+    #7AFDEC  /* Back to Light Aqua for a smooth loop */
+  );
+  background-size: 200% 200%;
+  animation: neonBgTransition 15s ease infinite; /* Smooth, slow transition */
+  z-index: -1; /* Place it behind the content */
+  filter: blur(80px); /* Creates a soft, glowing neon effect */
+}
+
+@keyframes neonBgTransition {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* Main App Container */
+.container {
+  background: rgba(255, 255, 255, 0.9); /* Slightly translucent white */
+  backdrop-filter: blur(10px); /* Add a subtle blur for depth */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* Stronger shadow for floating effect */
+  width: 450px;
+  text-align: center;
+  color: #212529; /* Charcoal Text Color */
+  position: relative; /* Ensure it stays above the neon effect */
+  animation: floatUp 6s ease-in-out infinite; /* Keep the subtle float */
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+h1 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Task input */
+.task-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #E9ECEF; /* Light border */
+  border-radius: 12px 0 0 12px;
+  outline: none;
+  font-size: 15px;
+  background-color: #F8F9FA;
+  color: #212529; /* Ensure input text is readable */
+}
+
+.task-input button {
+  padding: 12px 18px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  font-weight: 600;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.task-input button:hover {
+  transform: scale(1.05);
+  background: #0056b3;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F0F7FF; /* Light Blue Tint Background */
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  transition: transform 0.2s, background 0.3s;
+  text-align: left;
+  color: #212529; /* Ensure task text is readable */
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: #E0F0FF;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Action buttons */
+.actions button {
+  margin-left: 6px;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.actions button:hover {
+  transform: scale(1.15);
+}
+
+.complete-btn { background: #28A745; color: white; }
+.edit-btn { background: #FFC107; color: black; }
+.delete-btn { background: #DC3545; color: white; }
+
+/* Circular Progress */
+.progress-wrapper {
+  margin-top: 25px;
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  box-shadow: 0 0 25px rgba(122, 253, 236, 0.5); /* Shadow matches new light aqua */
+}
+
+.progress-circle span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #212529;
+}
+
+#progressText {
+  margin-top: 12px;
+  font-weight: 500;
+  color: #212529;
+}
+
+/* Confetti Particles */
+.confetti {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 0.9;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
