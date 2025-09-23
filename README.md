@@ -2,9 +2,9 @@
 
 A visually captivating and modern task manager application built with vanilla HTML, CSS, and JavaScript. This project focuses on a clean user interface, satisfying user interactions, and a beautiful, animated "pastel glow" background.
 
-**[View Live Demo](https://your-username.github.io/TASK-MANAGER/)** ---
+[View Live Demo](https://Krishnakumari29.github.io/TASK-MANAGER/) 
 
-Glow Task Manager Screenshot ("C:\Users\Krishnakumari\Downloads\task_manager.png")
+Glow Task Manager Screenshot ("https://github.com/Krishnakumari29/TASK-MANAGER-/blob/main/task_manager%20.png?raw=true")
 
 ✨ Features
 * **Full CRUD Functionality:** Add, edit, delete, and mark tasks as complete.
