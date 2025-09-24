@@ -1,4 +1,4 @@
-📋GlowTask Manager
+📋Task Manager
 
 A visually captivating and modern task manager application built with vanilla HTML, CSS, and JavaScript. This project focuses on a clean user interface, satisfying user interactions, and a beautiful, animated "pastel glow" background.
 
