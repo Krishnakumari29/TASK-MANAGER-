@@ -28,11 +28,11 @@ To run this project locally:
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+    git clone [https://github.com/Krishnakumari29/TASK-MANAGERER](https://github.com/Krishnakumari29/TASK-MANAGERER.git)
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd your-repo-name
+    cd TASK-MANAGERER
     ```
 3.  Open the `index.html` file in your favorite web browser.
 
